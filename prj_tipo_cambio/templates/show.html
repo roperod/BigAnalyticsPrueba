@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Tipo de Cambio</title>
+{% endblock %}
+
+{% block content %}
+<h2>Agregar Tipo de Cambio</h2>
+<a href="/logout" >Logout</a>
+<hr>
+<div>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Fecha</th>
+            <th>Tipo de Cambio</th>
+            <th>Editar / Borrar</th>
+        </tr>
+        {{ tipos_de_cambio | safe }}
+        <tr>
+            <td colspan="4"><a href="../add/">Agregar Nuevo</a></td>
+        </tr>
+    </table>
+</div>
+{% endblock %}

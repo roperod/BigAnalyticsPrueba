@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Editar Tipo de Cambio</title>
+{% endblock %}
+
+
+{% block content %}
+<h2>Editar Tipo de Cambio</h2>
+<hr>
+<div>
+    <form action="./{{tdc.id}}" method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Editar">
+    </form>
+    <form style="padding: 0.2rem 2rem;" action="../show" method="get">
+        <input type="submit" value="Regresar">
+    </form>
+</div>
+{% endblock %}
