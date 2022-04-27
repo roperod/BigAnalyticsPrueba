@@ -8,9 +8,11 @@ class CDateInput(forms.DateInput):
 class TipoDeCambioForm(forms.ModelForm):
     class Meta:
         model = TipoDeCambio
-        fields = ['cambio', 'fecha']
+        fields = ['venta', 'compra', 'fecha']
         widgets = {
             'fecha': CDateInput(attrs={
                 'class': 'form-date'
-            })
+            }),
+            'compra': forms.HiddenInput(),
+            'venta': forms.HiddenInput()
         }
